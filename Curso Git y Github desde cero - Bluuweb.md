@@ -64,7 +64,7 @@ Link al código: https://bluuweb.dev/03-git/02-git.html
 - Elegir la segunda opción (... OR PUSH AN EXISTING).
 - Copiar la primera linea de código con el comando <code>git remote add origin ...</code>
 - Pegar el comando elegido en la terminal de VSC
-- Ejecutar <code> git branch -M main <code> o <code> git branch -M master <code>, segun como se venga trabajando en local).
+- Ejecutar <code> git branch -M main </code> o <code> git branch -M master </code> (segun como se venga trabajando en local).
 - Ejecutar <code> git push -u origin main </code> o <code> git push -u origin master </code>.
 
 Con este procedimiento, se "subió" el repositorio a GitHub y ya los proximos cambios se subiran con GIT PUSH o COMMIT & PUSH (Source Version VSC).
