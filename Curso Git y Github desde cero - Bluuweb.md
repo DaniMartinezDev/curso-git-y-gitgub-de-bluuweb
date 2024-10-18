@@ -40,12 +40,13 @@ Link al código: https://bluuweb.dev/03-git/02-git.html
 
 # Comandos básicos para deploy ==> ADD ... COMMIT ... PUSH
 - GIT VERSION ==> Muestra la versión instalada. 
-- GIT HELP ==> Listado de comandos de Git. 
+- GIT HELP ==> Listado de comandos de Git.
+- GIT LOG --ONELINE ==> Listado de commits realizados. 
 
-- GIT INIT ==> Inicia un "REPOSITORIO". Se hace UNA SOLA VEZ por carpeta "raiz". 
+- GIT INIT ==> Inicia un "REPOSITORIO". Se hace UNA SOLA VEZ por proyecto. 
 - GIT ADD ==> Hace un escaneo de los archivos nuevos y modificados, y los añade al "staging area" (carpeta tempotal de Git). (Los archivos pasan de "Untracked" naranja a "A" verde).
-- COMMIT ==> Etiqueta archivos al "local repo", como paso previo al push en el deploy (GitHub por ejemplo). 
-- PUSH ==> "Sube" las modificaciones y archivos nuevos a la nube. 
+- GIT COMMIT -M "..." ==> Etiqueta archivos al "local repo", como paso previo al push en el deploy (GitHub por ejemplo). Se usa un -m para poner un mensaje que indique el proceso ejecutado. 
+- GIT PUSH ==> "Sube" las modificaciones y archivos nuevos a la nube. 
 
 
 
