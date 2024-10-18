@@ -50,9 +50,9 @@ Link al código: https://bluuweb.dev/03-git/02-git.html
 - GIT PUSH ==> "Sube" las modificaciones y archivos nuevos a la nube. Se debío haber creado el "repositorio" en GitHub previamente (ver abajo).
 
 ### Uso del Source Control de VSC (CTRL + SHIFT + G)
-- Simplifica el procedimiento visto antes, con botones directos:
---- Boton "+" (Stage Change) => Reemplaza el git add .
---- Boton "Commit" + texto => Reemplaza el git commit -m
+ Simplifica el procedimiento visto antes, con botones directos:
+- Boton "+" (Stage Change) => Reemplaza el git add .
+- Boton "Commit" + texto => Reemplaza el git commit -m
 
 
 
@@ -65,7 +65,7 @@ Link al código: https://bluuweb.dev/03-git/02-git.html
 - Copiar la primera linea de código con el comando git remote add origin ...
 - Pegar el comando elegido en la terminal de VSC
 - Ejecutar git branch -M main (o master, segun como se venga trabajando en local).
-- Ejecutar git push -u origin main (o master)
+- Ejecutar <code> git push -u origin main </code> (o master)
 
 Con este procedimiento, se "subió" el repositorio a GitHub y ya los proximos cambios se subiran con GIT PUSH o COMMIT & PUSH (Source Version VSC).
 
