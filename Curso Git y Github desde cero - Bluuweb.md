@@ -38,15 +38,20 @@ Link al código: https://bluuweb.dev/03-git/02-git.html
 ###Flujo de trabajo en Git ###
 
 
-# Comandos básicos para deploy ==> ADD ... COMMIT ... PUSH
+# Comandos básicos para deploy ==> ADD ... COMMIT ... PUSH #
 - GIT VERSION ==> Muestra la versión instalada. 
 - GIT HELP ==> Listado de comandos de Git.
 - GIT LOG --ONELINE ==> Listado de commits realizados. 
+- :Q! ==> Cierra la ejecución de un commit "trabado".
 
 - GIT INIT ==> Inicia un "REPOSITORIO". Se hace UNA SOLA VEZ por proyecto. 
-- GIT ADD ==> Hace un escaneo de los archivos nuevos y modificados, y los añade al "staging area" (carpeta tempotal de Git). (Los archivos pasan de "Untracked" naranja a "A" verde).
+- GIT ADD ==> Hace un escaneo de los archivos nuevos y modificados, y los añade al "staging area" (carpeta tempotal de Git). (Los archivos pasan de "Untracked" naranja a "A" verde). Se hace previo a un COMMIT.
 - GIT COMMIT -M "..." ==> Etiqueta archivos al "local repo", como paso previo al push en el deploy (GitHub por ejemplo). Se usa un -m para poner un mensaje que indique el proceso ejecutado. 
 - GIT PUSH ==> "Sube" las modificaciones y archivos nuevos a la nube. 
 
+# Uso del Source Control de VSC (CTRL + SHIFT + G) #
+- Simplifica el procedimiento visto antes, con botones directos:
+--- Boton "+" (Stage Change) => Reemplaza el git add .
+--- Boton "Commit" + texto => Reemplaza el git commit -m
 
 
