@@ -69,10 +69,16 @@ Link al código: https://bluuweb.dev/03-git/02-git.html
 
 Con este procedimiento, se "subió" el repositorio a GitHub y ya los proximos cambios se subiran con <code>GIT PUSH</code> o COMMIT & PUSH (Source Version VSC).
 
-### Clonar un repositorio de GitHub
+## Clonar un repositorio de GitHub
 
-## Mecanismo de clonación: 
+### Mecanismo de clonación 
 Pulsar el boton de arriba del repositorio llamado "<>code" y seleccionar CLONE. Existen tres metodos para clonar. 
+- Github Desktop (PREFERIDA) ==> Se abre la app de escritorio y se debe seleccionar la carpeta de destino de la clonación. 
 - URL ==> Copiar el link que figura y luego, ejecutar la terminal en la carpeta de destino, con el comando <code>git clone + link copiado</code>. 
-- Github Desktop ==> Se abre la app de escritorio y se debe seleccionar la carpeta de destino de la clonación. 
 - Descargar Zip ==> Se descargan las carpetas y archivos, pero sin los commits. Por eso se recomiendan las anteriores.
+
+
+
+# GIT INTERMEDIO (58:30)
+
+##
