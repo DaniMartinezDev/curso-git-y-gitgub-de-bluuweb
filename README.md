@@ -82,6 +82,6 @@ Pulsar el boton de arriba del repositorio llamado "<>code" y seleccionar CLONE. 
 # GIT INTERMEDIO (58:30)
 
 ## GIT Ignore
-- 
+- Retomar curso de acá.
 - 
 - 
