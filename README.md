@@ -128,7 +128,9 @@ Explicación: Uso en trabajo colaborativo, ya que no se suele trabajar en la ram
 
 ### Merge (1:38:00)
 Explicación: Fusión de branch (ramas). 
-- <code>git merge + ID branch "absorbente"</code> =>
+- Importante: Ubicarse en la rama de destino con el <code>git checkout + ID branch "absorbente"</code>.
+- <code>git merge + ID branch "absorbida"</code> => Realiza la fusión de ramas.q
+
 
 ## Git x: -
 Explicación:
