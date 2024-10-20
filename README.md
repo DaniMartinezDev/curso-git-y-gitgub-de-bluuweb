@@ -118,10 +118,17 @@ Explicación: Deshace los cambios realizados por un commit anterior creando un c
 - 
 
 ## Git Branch (ramas) & Merge (fusión): ... (1:32:15)
+### Branch
 Explicación: Uso en trabajo colaborativo, ya que no se suele trabajar en la rama MAIN. 
-
 - <code>git branch</code> ==> Muestra la rama actual en donde se esta trabajando.
-- 
+- <code>git branch + ID nuevo branch</code> ==> Crea una rama. 
+- <code>git checkout + ID branch de destino</code> ==> Desplazamiento entre ramas. 
+- <code>git log --oneline --graph</code> ==> Muestra el tree (arbol) de commits. 
+- <code>git push --set-upstream origin + ID Branch</code> ==> Sube a GitHub los cambios en la rama. Si se pone solo <code>git push</code> sale un error, porque eso solo se usa para la rama main.
+
+### Merge (1:38:00)
+Explicación: Fusión de branch (ramas). 
+- <code>git merge + ID branch "absorbente"</code> =>
 
 ## Git x: -
 Explicación:
