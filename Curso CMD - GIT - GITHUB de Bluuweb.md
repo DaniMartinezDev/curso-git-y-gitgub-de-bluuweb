@@ -83,3 +83,5 @@ Pulsar el boton de arriba del repositorio llamado "<>code" y seleccionar CLONE. 
 
 ## GIT Ignore
 - 
+- 
+- 
