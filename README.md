@@ -124,7 +124,8 @@ Explicación: Uso en trabajo colaborativo, ya que no se suele trabajar en la ram
 - <code>git branch + ID nuevo branch</code> ==> Crea una rama. 
 - <code>git checkout + ID branch de destino</code> ==> Desplazamiento entre ramas. 
 - <code>git log --oneline --graph</code> ==> Muestra el tree (arbol) de commits. 
-- <code>git push --set-upstream origin + ID Branch</code> ==> Sube a GitHub los cambios en la rama. Si se pone solo <code>git push</code> sale un error, porque eso solo se usa para la rama main.
+- <code>git push --set-upstream origin + ID branch</code> ==> Sube a GitHub los cambios en la rama. Si se pone solo <code>git push</code> sale un error, porque eso solo se usa para la rama main.
+- <code>git branch -d + ID branch a eliminar</code> ==> Borra un branch.
 
 ### Merge (1:38:00)
 Explicación: Fusión de branch (ramas). 
@@ -132,7 +133,7 @@ Explicación: Fusión de branch (ramas).
 - <code>git merge + ID branch "absorbida"</code> => Realiza la fusión de ramas. 
 
 
-## Git x: -
+## Conflicto entre Branchs & Mergers (1:41:40)
 Explicación:
 - 
 - 
