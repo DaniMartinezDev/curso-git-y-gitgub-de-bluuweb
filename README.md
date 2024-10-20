@@ -118,6 +118,12 @@ Explicación: Deshace los cambios realizados por un commit anterior creando un c
 - 
 
 ## Git Branch (ramas) & Merge (fusión): ... (1:32:15)
+Explicación: Uso en trabajo colaborativo, ya que no se suele trabajar en la rama MAIN. 
+
+- <code>git branch</code> ==> Muestra la rama actual en donde se esta trabajando.
+- 
+
+## Git x: -
 Explicación:
 - 
 - 
