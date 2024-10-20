@@ -98,11 +98,11 @@ Explicación: Sirve para revisar los cambios que se hicieron en los commits (de 
 Muestra la situación de esa "versión" (es decir, la "foto" del proyecto en ese commit).
 Importante: NO se usa para hacer cambios, solo para revisar esa versión en concreto. 
 - <code> git ckeckout + nombre commit a revisar</code> ==> Ir a la revisión indicada.
-- <code> git checkout master/main (o el nombre commit HEAD (última versión)) ==> Vuelve al estado actual.
+- <code> git checkout master/main (o el nombre commit HEAD (última versión))</code> ==> Vuelve al estado actual.
 
 ## Git master a main: Renombrar ramas (1:13:00)
 - <code> git branch -m master main </code> ==> Renombra solo en el proyecto.
-- <code>  git config --global init.defaultBranch main ==> Setea a Main como rama de origen por defecto.
+- <code>  git config --global init.defaultBranch main</code> ==> Setea a Main como rama de origen por defecto.
 
 ## Git Reset: Retroceder eliminando los cambios realizados (1:15:30)
 Explicación: Se "rescata" una versión anterior, eliminando los cambios de los commits posteriores. Pero si se quiere ir a la ultima versión, tambien se puede hacer usando el reset con el último commit.
@@ -129,7 +129,7 @@ Explicación: Uso en trabajo colaborativo, ya que no se suele trabajar en la ram
 ### Merge (1:38:00)
 Explicación: Fusión de branch (ramas). 
 - Importante: Ubicarse en la rama de destino con el <code>git checkout + ID branch "absorbente"</code>.
-- <code>git merge + ID branch "absorbida"</code> => Realiza la fusión de ramas.q
+- <code>git merge + ID branch "absorbida"</code> => Realiza la fusión de ramas. 
 
 
 ## Git x: -
