@@ -37,17 +37,18 @@ Link al código: https://bluuweb.dev/03-git/02-git.html
 - Permite respaldar el proyecto en la nube. 
 
 ## Comandos básicos para deploy ==> ADD ... COMMIT ... PUSH #
-- GIT VERSION ==> Muestra la versión instalada. 
-- GIT HELP ==> Listado de comandos de Git.
-- GIT LOG --ONELINE ==> Listado de commits realizados. 
-- :Q! ==> Cierra la ejecución de un commit "trabado".
+- <code>GIT VERSION</code> ==> Muestra la versión instalada. 
+- <code>GIT HELP</code> ==> Listado de comandos de Git.
+- <code>GIT LOG --ONELINE</code> ==> Listado de commits realizados. 
+- <code>:Q!</code> ==> Cierra la ejecución de un commit "trabado".
+- <code>K</code> ==> Cierra el git log --oneline que figura con "ESC"
 
 
 ## Flujo de trabajo en Git
-- GIT INIT ==> Inicia un "REPOSITORIO". Se hace UNA SOLA VEZ por proyecto. 
-- GIT ADD ==> Hace un escaneo de los archivos nuevos y modificados, y los añade al "staging area" (carpeta tempotal de Git). (Los archivos pasan de "Untracked" naranja a "A" verde). Se hace previo a un COMMIT.
-- GIT COMMIT -M "..." ==> Etiqueta archivos al "local repo", como paso previo al push en el deploy (GitHub por ejemplo). Se usa un -m para poner un mensaje que indique el proceso ejecutado. 
-- GIT PUSH ==> "Sube" las modificaciones y archivos nuevos a la nube. Se debío haber creado el "repositorio" en GitHub previamente (ver abajo).
+- <code>GIT INIT</code> ==> Inicia un "REPOSITORIO". Se hace UNA SOLA VEZ por proyecto. 
+- <code>GIT ADD</code> ==> Hace un escaneo de los archivos nuevos y modificados, y los añade al "staging area" (carpeta tempotal de Git). (Los archivos pasan de "Untracked" naranja a "A" verde). Se hace previo a un COMMIT.
+- <code>GIT COMMIT -M "..."</code> ==> Etiqueta archivos al "local repo", como paso previo al push en el deploy (GitHub por ejemplo). Se usa un -m para poner un mensaje que indique el proceso ejecutado. 
+- <code>GIT PUSH</code> ==> "Sube" las modificaciones y archivos nuevos a la nube. Se debío haber creado el "repositorio" en GitHub previamente (ver abajo).
 
 ## Uso del Source Control de VSC (CTRL + SHIFT + G)
  Simplifica el procedimiento visto antes, con botones directos:
@@ -86,28 +87,42 @@ Link al código: https://bluuweb.dev/03-git/03-git-intermedio.html#recursos
 Se utiliza para carpetas o archivos privados que no pueden ser mostrados al público, como por ejemplo, los archivos ".env" o la carpeta node_modules (entorno de Node JS).
 - CREAR ARCHIVO ".gitignore" ==> Ir agregando la lista de archivos a ser ignorados por Git (por ejemplo, ".env"). Los archivos y carpetas quedan en un color gris oscuro.
 
-## Git log: Viajar entre versiones
+## Git log: Viajar entre versiones (1:03:00)
 Explicación: Muestra el historial de commits realizados en el proyecto.
-- <code> git log --oneline </code> ==> 
+- <code> git log --oneline </code>
+- Si hay algun error con ESC ==> Pulsar tecla <code> K </code>
+- <code> git reflog </code> ==> Muestra el historial completo de los cambios (incluidos resets). Sirve para deshacer algun reset -- hard por ejemplo. 
 
-## Git x: Viajar entre versiones
+## Git checkout: Viajar entre versiones (1:07:00)
 Explicación: Sirve para revisar los cambios que se hicieron en los commits (de manera individual).
 Muestra la situación de esa "versión" (es decir, la "foto" del proyecto en ese commit).
 Importante: NO se usa para hacer cambios, solo para revisar esa versión en concreto. 
-- <code> git ckeckout (nombre commit a revisar)</code> ==> Ir a la revisión
-- <code> git checkout master o el nombre commit HEAD (última versión) ==> Vuelve al estado actual
+- <code> git ckeckout + nombre commit a revisar</code> ==> Ir a la revisión indicada.
+- <code> git checkout master/main (o el nombre commit HEAD (última versión)) ==> Vuelve al estado actual.
 
-## Git x: Viajar entre versiones
-Explicación
+## Git master a main: Renombrar ramas (1:13:00)
+- <code> git branch -m master main </code> ==> Renombra solo en el proyecto.
+- <code>  git config --global init.defaultBranch main ==> Setea a Main como rama de origen por defecto.
+
+## Git Reset: Retroceder eliminando los cambios realizados (1:15:30)
+Explicación: Se "rescata" una versión anterior, eliminando los cambios de los commits posteriores. Pero si se quiere ir a la ultima versión, tambien se puede hacer usando el reset con el último commit.
+- <code> git reset + nombre commit a resetear</code> ==> Recupera la versión anterior pero conserva los archivos (sin seguimiento, con la "U").
+- <code> git reset --hard + nombre commit a resetear</code> ==> Recupera la versión anterior pero tambien borra todo el contenido de los commits posteriores. Se deshace con un reset -- hard a la última versión (se visualiza con git reflog).
+
+ADVERTENCIA: Posibles conflictos de versiones en GitHub, sobre todo en trabajo colaborativo, ya que hace commits de versiones anteriores en el repositorio remoto, y entonces, se eliminan tambien los commits de GitHub. Se soluciona con: 
+<code>git pull origin YOUR_BRANCH_NAME</code> ==> Restaura la última versión remota.
+
+## Git Revert: Borrar un commit concreto (1:29:00)
+Explicación: Deshace los cambios realizados por un commit anterior creando un commit completamente nuevo, todo esto sin alterar el historial de commits.
+- <code>git revert + ID commit</code> ==> Revertir un commit.
+- 
+
+## Git Branch (ramas) & Merge (fusión): ... (1:32:15)
+Explicación:
 - 
 - 
 
-## Git x: Viajar entre versiones
-Explicación
-- 
-- 
-
-## Git x: Viajar entre versiones
-Explicación
+## Git x: -
+Explicación:
 - 
 - 
