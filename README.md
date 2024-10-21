@@ -1,7 +1,7 @@
 # CURSO DE CMD, GIT & GITHUB DE BLUUWEB 
-Link al tutorial Bluuweb: https://www.youtube.com/watch?v=PW_A-lOpVV0
-Link al tutorial Dalto: https://www.youtube.com/watch?v=9ZJ-K-zk_Go
-Link al tutorial MiDu (Aportes a proyectos): https://www.youtube.com/watch?v=niPExbK8lSw&list=TLPQMjAxMDIwMjRRcaJrawUS6g&index=3
+- Link al tutorial Bluuweb: https://www.youtube.com/watch?v=PW_A-lOpVV0
+- Link al tutorial Dalto: https://www.youtube.com/watch?v=9ZJ-K-zk_Go
+- Link al tutorial MiDu (Aportes a proyectos): https://www.youtube.com/watch?v=niPExbK8lSw&list=TLPQMjAxMDIwMjRRcaJrawUS6g&index=3
 
 # CMD (terminal) y PowerShell
 Link al código: https://bluuweb.dev/03-git/
@@ -12,23 +12,26 @@ Link al código: https://bluuweb.dev/03-git/
 ## COMANDOS BÁSICOS EN CMD: 
 
 ### Desplazamientos y ejecuciones
-- CD ==> Ir a una dirección (carpeta) en concreto. En PowerShell se recomienda poner entre comillas si la carpeta tiene espacios.
 - CD + ARRASTRAR CARPETA ==> Abre una dirección en especifico. 
 - CMD EN NAVEGADOR DE WINDOWS ==> Poner CMD o Powershell en la dirección de la carpeta (F4) y abre la Terminal en esa ruta. 
-- CD.. ==> Retrocede a la carpeta anterior. 
-- DIR ==> Muestra el directorio de ubicaciones disponibles.
-- PWD ==> Muestra la dirección actual.
-- CLS o CLEAR ==> Limpiar la terminal.
-- CTRL + C ==> Detiene una ejecución en curso.
+- <code>CD</code> ==> Ir a una dirección (carpeta) en concreto. En PowerShell se recomienda poner entre comillas si la carpeta tiene espacios.
+- <code>CD..</code> ==> Retrocede a la carpeta anterior. 
+- <code>DIR</code> ==> Muestra el directorio de ubicaciones disponibles.
+- <code>LS</code> ==> Muestra el contenido del directorio.
+- <code>LS -A</code> ==> Muestra el contenido oculto del directorio.
+- <code>PWD</code> ==> Muestra la dirección actual.
+- <code>CLS</code> o <code>CLEAR</code> ==> Limpiar la terminal.
+- <code>CTRL + C</code> ==> Detiene una ejecución en curso.
 
 ### Gestión de archivos y carpetas
-- MKDIR o MD ==> Crear carpeta
-- NI + NOMBRE + EXTENSION==> Crear archivo (ni styles.css por ejemplo).
-- MOVE + NOMBRE ARCHIVO + CARPETA DE DESTINO ==> Mueve un archivo o carpeta
+- <code>MKDIR</code> o <code>MD</code> ==> Crear carpeta
+- <code>RMDIR</code> ==> Borrar carpeta
+- <code>NI + NOMBRE + EXTENSION</code> ==> Crear archivo (ni styles.css por ejemplo).
+- </ode>MOVE + nombre del archivo + carpeta de destino</code> ==> Mueve un archivo o carpeta
 
 ### Visual Studio Code (VSC)
 - ARRASTRAR CARPETA A VSC ==> Abre el directorio para trabajar en ella. 
-- CTLR + SHIFT + Ñ ==> Abre la Terminal integrada en VSC.
+- <code>CTLR + SHIFT + Ñ</code> ==> Abre la Terminal integrada en VSC.
 
 
 
@@ -41,14 +44,21 @@ Link al código: https://bluuweb.dev/03-git/02-git.html
 ## Comandos básicos para deploy ==> ADD ... COMMIT ... PUSH #
 - <code>GIT VERSION</code> ==> Muestra la versión instalada. 
 - <code>GIT HELP</code> ==> Listado de comandos de Git.
+- <code>GIT CONFIG --LIST</code> ==> Listado de configuraciones actuales de Git.
 - <code>GIT LOG --ONELINE</code> ==> Listado de commits realizados. 
 - <code>:Q!</code> ==> Cierra la ejecución de un commit "trabado".
 - <code>K</code> ==> Cierra el git log --oneline que figura con "ESC"
 
 
+## Areas de trabajo en Git
+Explicación: Hay tres areas o espacios de trabajo principales". 
+1) Área de trabajo (Working Directory) ==> Carpeta de la computadora, no estan trackeados ("untracked") por Git. Es el directorio donde se realizan los cambios y modificaciones en el proyecto. Aquí se encuentran los archivos y carpetas que se están editando o creando.
+2) Área de preparación (Staging Area o Index): También conocido como “índice” o “área de preparación ==>  espacio temporal donde se almacenan los archivos seleccionados para ser commitizados (almacenados en el repositorio). El staging area es donde se preparan los cambios antes de enviarlos al repositorio.
+3) Repositorio (Repository) ==> Es la copia de seguridad de todo el proyecto, incluyendo todas las versiones anteriores. El repositorio es el lugar donde se almacenan los datos de Git y se realizan las operaciones de commit, push y pull.
+
 ## Flujo de trabajo en Git
 - <code>GIT INIT</code> ==> Inicia un "REPOSITORIO". Se hace UNA SOLA VEZ por proyecto. 
-- <code>GIT ADD</code> ==> Hace un escaneo de los archivos nuevos y modificados, y los añade al "staging area" (carpeta tempotal de Git). (Los archivos pasan de "Untracked" naranja a "A" verde). Se hace previo a un COMMIT.
+- <code>GIT ADD</code> ==> Hace un escaneo de los archivos nuevos y modificados, y los añade al "staging area" (carpeta tempotal de Git). (Los archivos pasan de "Untracked" naranja a "A" verde). Se hace previo a un COMMIT. NO SE RECOMIENDA USAR EL PUNTO, SINO ESPECIFICAR EL ARCHIVO.
 - <code>GIT COMMIT -M "..."</code> ==> Etiqueta archivos al "local repo", como paso previo al push en el deploy (GitHub por ejemplo). Se usa un -m para poner un mensaje que indique el proceso ejecutado. 
 - <code>GIT PUSH</code> ==> "Sube" las modificaciones y archivos nuevos a la nube. Se debío haber creado el "repositorio" en GitHub previamente (ver abajo).
 
@@ -119,7 +129,7 @@ Explicación: Deshace los cambios realizados por un commit anterior creando un c
 - <code>git revert + ID commit</code> ==> Revertir un commit.
 - 
 
-## Git Branch (ramas) & Merge (fusión): ... (1:32:15)
+## Git Branch (ramas) & Merge (fusión) (1:32:15)
 ### Branch
 Explicación: Uso en trabajo colaborativo, ya que no se suele trabajar en la rama MAIN. 
 - <code>git branch</code> ==> Muestra la rama actual en donde se esta trabajando.
@@ -161,12 +171,14 @@ Explicación: Sirve para hacer versiones del proyecto.
 - <code> git stash apply </code> ==> Aplica los cambios guardados
 
 
-## Nombres usuales de las ramas en empresas: 
+
+# Nombres usuales de las ramas en empresas: 
 - <code>MAIN</code> ==> Esta es la rama principal del proyecto. Contiene el código estable y funcional que está listo para ser desplegado en producción. Todos los cambios importantes y completados se fusionan en esta rama después de una revisión adecuada.
 - <code>DEVELOP</code> ==> También conocida como rama de desarrollo, esta rama contiene el código en desarrollo para la próxima versión del software. Es donde se fusionan los cambios de las ramas de características y se prueban en conjunto antes de ser fusionados en la rama principal.
 - <code>FEATURE</code> ==> Se utilizan ramas de características para desarrollar nuevas funcionalidades o características. Cada vez que un desarrollador comienza a trabajar en una nueva característica, generalmente crea una rama de características a partir de la rama de desarrollo. Una vez que la característica está completa y ha sido revisada, se fusiona de nuevo en la rama de desarrollo.
 - <code>HOTFIX</code> ==> Esta rama se utiliza para corregir problemas críticos en producción. Si se descubre un error que necesita ser solucionado de inmediato, se crea una rama de hotfix a partir de la rama principal (main o master), se realizan las correcciones necesarias y luego se fusiona tanto en la rama principal como en la rama de desarrollo.
 - <code>RELEASE</code> ==> Se utiliza para preparar una nueva versión del software para su lanzamiento. Se crean ramas de lanzamiento a partir de la rama de desarrollo y se realizan las pruebas finales y los ajustes necesarios antes de fusionar en la rama principal y etiquetar la versión.
+
 
 
 # Para seguir estudiando...
