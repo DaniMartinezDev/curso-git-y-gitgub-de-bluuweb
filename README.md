@@ -41,6 +41,12 @@ Link al código: https://bluuweb.dev/03-git/02-git.html
 - Las "branches" (ramas) permiten trabajar con una base de código paralela al proyecto en si. 
 - Permite respaldar el proyecto en la nube. 
 
+## Areas de trabajo en Git
+Explicación: Hay tres areas o espacios de trabajo principales". 
+1) Área de trabajo (Working Directory) ==> Carpeta de la computadora, no estan trackeados ("untracked") por Git. Es el directorio donde se realizan los cambios y modificaciones en el proyecto. Aquí se encuentran los archivos y carpetas que se están editando o creando.
+2) Área de preparación (Staging Area o Index): También conocido como “índice” o “área de preparación ==>  espacio temporal donde se almacenan los archivos seleccionados para ser commitizados (almacenados en el repositorio). El staging area es donde se preparan los cambios antes de enviarlos al repositorio.
+3) Repositorio (Repository) ==> Es la copia de seguridad de todo el proyecto, incluyendo todas las versiones anteriores. El repositorio es el lugar donde se almacenan los datos de Git y se realizan las operaciones de commit, push y pull.
+
 ## Comandos básicos para deploy ==> ADD ... COMMIT ... PUSH #
 - <code>GIT VERSION</code> ==> Muestra la versión instalada. 
 - <code>GIT HELP</code> ==> Listado de comandos de Git.
@@ -49,18 +55,15 @@ Link al código: https://bluuweb.dev/03-git/02-git.html
 - <code>:Q!</code> ==> Cierra la ejecución de un commit "trabado".
 - <code>K</code> ==> Cierra el git log --oneline que figura con "ESC"
 
-
-## Areas de trabajo en Git
-Explicación: Hay tres areas o espacios de trabajo principales". 
-1) Área de trabajo (Working Directory) ==> Carpeta de la computadora, no estan trackeados ("untracked") por Git. Es el directorio donde se realizan los cambios y modificaciones en el proyecto. Aquí se encuentran los archivos y carpetas que se están editando o creando.
-2) Área de preparación (Staging Area o Index): También conocido como “índice” o “área de preparación ==>  espacio temporal donde se almacenan los archivos seleccionados para ser commitizados (almacenados en el repositorio). El staging area es donde se preparan los cambios antes de enviarlos al repositorio.
-3) Repositorio (Repository) ==> Es la copia de seguridad de todo el proyecto, incluyendo todas las versiones anteriores. El repositorio es el lugar donde se almacenan los datos de Git y se realizan las operaciones de commit, push y pull.
-
 ## Flujo de trabajo en Git
 - <code>GIT INIT</code> ==> Inicia un "REPOSITORIO". Se hace UNA SOLA VEZ por proyecto. 
 - <code>GIT ADD</code> ==> Hace un escaneo de los archivos nuevos y modificados, y los añade al "staging area" (carpeta tempotal de Git). (Los archivos pasan de "Untracked" naranja a "A" verde). Se hace previo a un COMMIT. NO SE RECOMIENDA USAR EL PUNTO, SINO ESPECIFICAR EL ARCHIVO.
 - <code>GIT COMMIT -M "..."</code> ==> Etiqueta archivos al "local repo", como paso previo al push en el deploy (GitHub por ejemplo). Se usa un -m para poner un mensaje que indique el proceso ejecutado. 
+- <code> GIT COMMIT AMEND </code> ==> Modifica el último commit, evitando generar commits innecesarios. Previamente hay que añadir las modificaciones al staging area. 
 - <code>GIT PUSH</code> ==> "Sube" las modificaciones y archivos nuevos a la nube. Se debío haber creado el "repositorio" en GitHub previamente (ver abajo).
+- <code>GIT STATUS -S</code> ==> Muestra el estado actual de los archivos y carpetas del proyecto.
+- <code>GIT DIFF --STAGED</code> ==> Muestra las diferencias entre la versión del area de preparación y  la última versión "commiteada".
+- <code>GIT DIFF + ID Commit 1 + ID Commit 2</code> ==> Muestra las diferencias entre dos versiones "commiteadas".
 
 ## Uso del Source Control de VSC (CTRL + SHIFT + G)
  Simplifica el procedimiento visto antes, con botones directos:
@@ -99,13 +102,13 @@ Link al código: https://bluuweb.dev/03-git/03-git-intermedio.html#recursos
 Se utiliza para carpetas o archivos privados que no pueden ser mostrados al público, como por ejemplo, los archivos ".env" o la carpeta node_modules (entorno de Node JS).
 - CREAR ARCHIVO ".gitignore" ==> Ir agregando la lista de archivos a ser ignorados por Git (por ejemplo, ".env"). Los archivos y carpetas quedan en un color gris oscuro.
 
-## Git log: Viajar entre versiones (1:03:00)
+## Git Log: Viajar entre versiones (1:03:00)
 Explicación: Muestra el historial de commits realizados en el proyecto.
 - <code> git log --oneline </code>
 - Si hay algun error con ESC ==> Pulsar tecla <code> K </code>
 - <code> git reflog </code> ==> Muestra el historial completo de los cambios (incluidos resets). Sirve para deshacer algun reset -- hard por ejemplo. 
 
-## Git checkout: Viajar entre versiones (1:07:00)
+## Git Checkout: Viajar entre versiones (1:07:00)
 Explicación: Sirve para revisar los cambios que se hicieron en los commits (de manera individual).
 Muestra la situación de esa "versión" (es decir, la "foto" del proyecto en ese commit).
 Importante: NO se usa para hacer cambios, solo para revisar esa versión en concreto. 
