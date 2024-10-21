@@ -1,5 +1,7 @@
 # CURSO DE CMD, GIT & GITHUB DE BLUUWEB 
-Link al tutorial: https://www.youtube.com/watch?v=PW_A-lOpVV0
+Link al tutorial Bluuweb: https://www.youtube.com/watch?v=PW_A-lOpVV0
+Link al tutorial Dalto: https://www.youtube.com/watch?v=9ZJ-K-zk_Go
+Link al tutorial MiDu (Aportes a proyectos): https://www.youtube.com/watch?v=niPExbK8lSw&list=TLPQMjAxMDIwMjRRcaJrawUS6g&index=3
 
 # CMD (terminal) y PowerShell
 Link al código: https://bluuweb.dev/03-git/
@@ -132,13 +134,39 @@ Explicación: Fusión de branch (ramas).
 - Importante: Ubicarse en la rama de destino con el <code>git checkout + ID branch "absorbente"</code>.
 - <code>git merge + ID branch "absorbida"</code> => Realiza la fusión de ramas. 
 
+### Conflicto entre Branchs & Mergers (1:41:40)
+Explicación: Colisión de versiones en el código de un archivo. 
+- VSC ofrece la posibilidad de comparar las versiones y decidir que hacer: mantener una sola versión o tratar de fusionar igual. 
+- Hacer un commit luego de solucionado el conflicto.
 
-## Conflicto entre Branchs & Mergers (1:41:40)
-Explicación:
-- 
-- 
 
-## Git x: -
-Explicación:
-- 
-- 
+## Git Tags (1:49:40)
+Explicación: Sirve para hacer versiones del proyecto. 
+- <code>git tag + nombre de la versión (sin espacios) + -m "mensaje de la versión"</code> ==> Creación de la versión (git tag versionAlpha V 0.0.1)
+- <code> git tag </code> ==> Listado de tags
+- <code> git tag -a nombreTag f52f3da -m "version alpha" </code> ==> Le da una versión a un commit especifico. 
+- <code> git show nombreTag </code> ==> Muestra información de un tag.
+- <code> git push --tags </code> ==> Sube los tags al repositorio.
+
+
+## Git Push - Pull - Stash
+### Git Push
+- <code> git push</code> ==> Sube el repositorio local al remoto
+
+### Git Pull
+- <code> git pull</code> ==> Descarga el repositorio remoto en el local
+
+### Git Stash
+- <code> git stash </code> ==> Permite guardar temporalmente los cambios que no están listos para ser confirmados. Esto es útil cuando se necesita cambiar de rama para trabajar en algo más urgente, pero no se quiere hacer un commit de los cambios actuales.
+- <code> git stash apply </code> ==> Aplica los cambios guardados
+
+
+## Nombres usuales de las ramas en empresas: 
+- <code>MAIN</code> ==> Esta es la rama principal del proyecto. Contiene el código estable y funcional que está listo para ser desplegado en producción. Todos los cambios importantes y completados se fusionan en esta rama después de una revisión adecuada.
+- <code>DEVELOP</code> ==> También conocida como rama de desarrollo, esta rama contiene el código en desarrollo para la próxima versión del software. Es donde se fusionan los cambios de las ramas de características y se prueban en conjunto antes de ser fusionados en la rama principal.
+- <code>FEATURE</code> ==> Se utilizan ramas de características para desarrollar nuevas funcionalidades o características. Cada vez que un desarrollador comienza a trabajar en una nueva característica, generalmente crea una rama de características a partir de la rama de desarrollo. Una vez que la característica está completa y ha sido revisada, se fusiona de nuevo en la rama de desarrollo.
+- <code>HOTFIX</code> ==> Esta rama se utiliza para corregir problemas críticos en producción. Si se descubre un error que necesita ser solucionado de inmediato, se crea una rama de hotfix a partir de la rama principal (main o master), se realizan las correcciones necesarias y luego se fusiona tanto en la rama principal como en la rama de desarrollo.
+- <code>RELEASE</code> ==> Se utiliza para preparar una nueva versión del software para su lanzamiento. Se crean ramas de lanzamiento a partir de la rama de desarrollo y se realizan las pruebas finales y los ajustes necesarios antes de fusionar en la rama principal y etiquetar la versión.
+
+
+# Para seguir estudiando...
