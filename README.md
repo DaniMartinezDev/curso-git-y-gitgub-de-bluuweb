@@ -100,7 +100,12 @@ Link al código: https://bluuweb.dev/03-git/03-git-intermedio.html#recursos
 
 ## Git Ignore: Ignorar archivos o carpetas en Git
 Se utiliza para carpetas o archivos privados que no pueden ser mostrados al público, como por ejemplo, los archivos ".env" o la carpeta node_modules (entorno de Node JS).
-- CREAR ARCHIVO ".gitignore" ==> Ir agregando la lista de archivos a ser ignorados por Git (por ejemplo, ".env"). Los archivos y carpetas quedan en un color gris oscuro.
+- <code>git config --global core.excludesfile + Directorio donde está el "GIT IGNORE GLOBAL"</code> ==> Sirve para todos los repositorios.  
+- CREAR ARCHIVO ".gitignore" ==> Ir agregando la lista de archivos a ser ignorados por Git (por ejemplo, ".env" o que tengan archivos intermedio). Los archivos y carpetas quedan en un color gris oscuro.
+- <code>* + formato de archivo</code> ==> Ignora los archivos de un mismo formato (.mp4 por ejemplo).
+- Excepción al * ==> poner <code>!</code> y el nombre del archivo a commitear.
+- Ignorar todo el contenido de un directorio ==> <code>nombreCarpeta/</code>
+- Excepción al ignorar una carpeta ==> poner <code>!nombreCarpeta/nombreArchivoExcepción</code> y el nombre del archivo a commitear del directorio ignorado.
 
 ## Git Log: Viajar entre versiones (1:03:00)
 Explicación: Muestra el historial de commits realizados en el proyecto.
@@ -134,22 +139,24 @@ Explicación: Deshace los cambios realizados por un commit anterior creando un c
 
 ## Git Branch (ramas) & Merge (fusión) (1:32:15)
 ### Branch
-Explicación: Uso en trabajo colaborativo, ya que no se suele trabajar en la rama MAIN. 
+Explicación: Uso en trabajo colaborativo, ya que no se suele trabajar en la rama MAIN. La creación, modificación y elim inaci´pon se puede hacer con VSC. 
 - <code>git branch</code> ==> Muestra la rama actual en donde se esta trabajando.
-- <code>git branch + ID nuevo branch</code> ==> Crea una rama. 
-- <code>git checkout + ID branch de destino</code> ==> Desplazamiento entre ramas. 
+- <code>git branch + ID nuevo branch</code> ==> Crea una rama. No dejar espacios en los nombres, usar guion medio. 
+- <code>git branch -m + ID viejo branch + ID nuevo branch</code> ==> Modifica el nombre de la rama (si no estamos posicionados en ella, sino, se hace directamente con el nuevo ID).
+- <code>git switch -c + ID branch de destino</code> ==> Crear y desplazarse a esa nueva rama. 
+- <code>git switch + ID branch de destino</code> ==> Desplazamiento entre ramas. 
 - <code>git log --oneline --graph</code> ==> Muestra el tree (arbol) de commits. 
 - <code>git push --set-upstream origin + ID branch</code> ==> Sube a GitHub los cambios en la rama. Si se pone solo <code>git push</code> sale un error, porque eso solo se usa para la rama main.
-- <code>git branch -d + ID branch a eliminar</code> ==> Borra un branch.
+- <code>git branch -d + ID branch a eliminar</code> ==> Borra un branch. No estar posicionado en esa rama a eliminar. 
 
 ### Merge (1:38:00)
-Explicación: Fusión de branch (ramas). 
-- Importante: Ubicarse en la rama de destino con el <code>git checkout + ID branch "absorbente"</code>.
+Explicación: Fusión de branch (ramas). Fusiona los commits, pero las ramas como tales siguen existiendo. 
+- Importante: Ubicarse en la rama de destino con el <code>git switch + ID branch "absorbente"</code>.
 - <code>git merge + ID branch "absorbida"</code> => Realiza la fusión de ramas. 
 
 ### Conflicto entre Branchs & Mergers (1:41:40)
 Explicación: Colisión de versiones en el código de un archivo. 
-- VSC ofrece la posibilidad de comparar las versiones y decidir que hacer: mantener una sola versión o tratar de fusionar igual. 
+- VSC ofrece la posibilidad de comparar las versiones y decidir que hacer: mantener una sola versión o tratar de fusionar igual. Tiene una ventana especial apra hacer la compración. 
 - Hacer un commit luego de solucionado el conflicto.
 
 
